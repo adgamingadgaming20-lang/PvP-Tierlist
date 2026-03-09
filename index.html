@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>🏆Vanilla Crystal PvP Tier List🏆</title>
+
+<style>
+
+body{
+background:#0b1220;
+font-family:Arial;
+color:white;
+padding:20px;
+}
+
+h1{
+text-align:center;
+margin-bottom:10px;
+}
+
+/* Discord Button */
+
+.discord{
+text-align:center;
+margin-bottom:25px;
+}
+
+.discord a{
+background:#5865F2;
+color:white;
+padding:10px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+transition:0.2s;
+}
+
+.discord a:hover{
+background:#4752c4;
+}
+
+/* Container */
+
+.container{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+/* Tier box */
+
+.tier{
+background:#111a2e;
+padding:15px;
+border-radius:10px;
+width:200px;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+.tier h2{
+text-align:center;
+padding:6px;
+border-radius:6px;
+margin-bottom:10px;
+}
+
+/* Bright tier colors */
+
+.tier1 h2{background:#ff4d4d;}
+.tier2 h2{background:#ff944d;}
+.tier3 h2{background:#ffd24d;}
+.tier4 h2{background:#4dff88;}
+.tier5 h2{background:#4db8ff;}
+
+/* HT / LT labels */
+
+.sub{
+margin-top:10px;
+font-size:14px;
+color:#9bb3ff;
+border-bottom:1px solid #2a3a6b;
+padding-bottom:2px;
+}
+
+/* Player rows */
+
+.player{
+display:flex;
+align-items:center;
+gap:8px;
+background:#1b2745;
+padding:6px;
+margin:5px 0;
+border-radius:6px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.player:hover{
+background:#243463;
+transform:scale(1.05);
+}
+
+.player img{
+width:28px;
+height:28px;
+}
+
+/* Popup */
+
+.popup{
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:#0f172a;
+padding:20px;
+border-radius:10px;
+display:none;
+text-align:center;
+box-shadow:0 0 20px black;
+}
+
+.popup button{
+margin-top:10px;
+padding:6px 12px;
+border:none;
+background:#4db8ff;
+border-radius:6px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<body background="C:\Users\AjOy\OneDrive\Documents\1.jpg">
+
+<h1>🏆 Vanilla Crystal PvP Tier List🏆</h1>
+<h1>
+<font face="Gongzaga">
+<font color="yellow">🚨If you want to prove your skills and climb the ranks, this is your chance⚔️</h1></font></font>
+
+<div class="discord">
+<a href="https://discord.gg/yaN786jx" target="_blank">Join Our Discord</a>
+</div>
+
+<div class="container">
+
+
+<!-- Tier 1 -->
+
+<div class="tier tier1">
+
+<h2>🏆 Tier 1</h2>
+
+<h3 class="sub">HT1</h3>
+
+<h3 class="sub">LT1</h3>
+
+</div>
+
+
+<!-- Tier 2 -->
+
+<div class="tier tier2">
+
+<h2>🥈 Tier 2</h2>
+
+<h3 class="sub">HT2</h3>
+
+<h3 class="sub">LT2</h3>
+
+</div>
+
+
+<!-- Tier 3 -->
+
+<div class="tier tier3">
+
+<h2>🥉 Tier 3</h2>
+
+<h3 class="sub">HT3</h3>
+
+<h3 class="sub">LT3</h3>
+
+<div class="player" onclick="show('Trinity','LT3')">
+<img src="https://minotar.net/avatar/Trinity">
+Trinity
+</div>
+
+</div>
+
+
+<!-- Tier 4 -->
+
+<div class="tier tier4">
+
+<h2>Tier 4</h2>
+
+<h3 class="sub">HT4</h3>
+
+<div class="player" onclick="show('Pomojz','HT4')">
+<img src="https://minotar.net/avatar/Pomojz">
+Pomojz
+</div>
+
+<h3 class="sub">LT4</h3>
+
+<div class="player" onclick="show('OP_SONU','LT4')">
+<img src="https://minotar.net/avatar/OP_SONU">
+OP_SONU
+</div>
+
+</div>
+
+
+<!-- Tier 5 -->
+
+<div class="tier tier5">
+
+<h2>Tier 5</h2>
+
+<h3 class="sub">HT5</h3>
+
+<div class="player" onclick="show('monster1037','HT5')">
+<img src="https://minotar.net/avatar/monster1037">
+monster1037
+</div>
+
+<h3 class="sub">LT5</h3>
+
+<div class="player" onclick="show('OXYG3N_','LT5')">
+<img src="https://minotar.net/avatar/OXYG3N_">
+OXYG3N_
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Popup -->
+
+<div class="popup" id="popup">
+
+<img id="skin" width="80">
+
+<h2 id="name"></h2>
+
+<p id="tier"></p>
+
+<button onclick="closePopup()">Close</button>
+
+</div>
+
+
+<script>
+
+function show(name,tier){
+
+document.getElementById("popup").style.display="block"
+
+document.getElementById("name").innerText=name
+
+document.getElementById("tier").innerText="Rank: "+tier
+
+document.getElementById("skin").src="https://minotar.net/armor/body/"+name+"/100.png"
+
+}
+
+function closePopup(){
+
+document.getElementById("popup").style.display="none"
+
+}
+
+</script>
+
+<h1>
+<br></h1>
+<h1>
+<font face="Salina">⚠️Information⚠️</h1></font>
+<div class="info">
+<h2><P align="center">About This Tier List</h2></P>
+
+<p>
+<P align="center">This website shows the ranking of Minecraft Crystal PvP players based on their skill level and performance🏆.
+Players are placed into different tiers to represent their strength in competitive PvP🌍.
+</p>
+
+<p>
+<P align="center">Each tier is divided into:
+<br>
+<b><P align="center">🥇HT (High Tier)</b> – the strongest players in that level🥇.
+<br>
+<b><P align="center">🥈LT (Low Tier)</b> – players who are still strong but slightly below the HT players🥈.
+</p>
+
+<p>
+<P align="center">🔔Tiers go from <b>HT1 / LT1</b> (best players) down to <b>HT5 / LT5</b>🔔.
+</p>
+
+</div>
+
+</body>
+</html>
