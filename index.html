@@ -508,6 +508,130 @@ transform:translateY(0);
 }
 }
 
+.mode-buttons button{
+position:relative;
+overflow:hidden;
+}
+
+.mode-buttons button::after{
+content:"";
+position:absolute;
+width:0;
+height:0;
+background:rgba(255,255,255,0.3);
+border-radius:50%;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+transition:0.4s;
+}
+
+.mode-buttons button:active::after{
+width:200px;
+height:200px;
+}
+
+.player{
+opacity:0;
+transform:translateY(10px);
+animation:playerEnter 0.4s forwards;
+}
+
+.player:nth-child(1){animation-delay:0.05s;}
+.player:nth-child(2){animation-delay:0.1s;}
+.player:nth-child(3){animation-delay:0.15s;}
+.player:nth-child(4){animation-delay:0.2s;}
+.player:nth-child(5){animation-delay:0.25s;}
+
+@keyframes playerEnter{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.tier-section{
+border:1px solid #1f2a44;
+animation:borderPulse 4s infinite alternate;
+}
+
+@keyframes borderPulse{
+from{
+box-shadow:0 0 5px rgba(59,130,246,0.2);
+}
+to{
+box-shadow:0 0 12px rgba(59,130,246,0.6);
+}
+}
+
+.mode{
+animation:modeSlide 0.35s ease;
+}
+
+@keyframes modeSlide{
+from{
+opacity:0;
+transform:translateX(20px);
+}
+to{
+opacity:1;
+transform:translateX(0);
+}
+}
+
+.discord-join{
+text-align:center;
+margin:20px 0;
+}
+
+.discord-join a{
+display:inline-block;
+background:#5865F2;
+color:white;
+font-weight:bold;
+padding:12px 20px;
+border-radius:10px;
+text-decoration:none;
+font-size:16px;
+transition:0.25s;
+box-shadow:0 0 10px rgba(88,101,242,0.6);
+}
+
+/* hover effect */
+
+.discord-join a:hover{
+transform:translateY(-3px) scale(1.05);
+box-shadow:0 0 18px rgba(88,101,242,0.9);
+background:#4752c4;
+}
+
+.discord-join a{
+animation:discordPulse 3s infinite;
+}
+
+@keyframes discordPulse{
+0%{box-shadow:0 0 10px rgba(88,101,242,0.5);}
+50%{box-shadow:0 0 22px rgba(88,101,242,1);}
+100%{box-shadow:0 0 10px rgba(88,101,242,0.5);}
+}
+
+.mode-buttons button:active{
+transform:scale(0.92);
+}
+
+.tier-title{
+animation:tierGlow 3s infinite alternate;
+}
+
+@keyframes tierGlow{
+from{
+text-shadow:0 0 4px rgba(255,255,255,0.2);
+}
+to{
+text-shadow:0 0 12px rgba(255,255,255,0.7);
+}
+}
+
 </style>
 
 </head>
@@ -524,8 +648,10 @@ transform:translateY(0);
 <font face="Gongzaga">
 <font color="yellow">🚨If you want to prove your skills and climb the ranks, this is your chance⚔️</h1></font></font>
 
-<div class="discord">
-<a href="https://discord.gg/yaN786jx" target="_blank">Join Our Discord</a>
+<div class="discord-join">
+<a href="https://discord.gg/hqDWTpD7" target="_blank">
+🚀 Join Our Discord
+</a>
 </div>
 
 <div class="gamemodes">
@@ -556,7 +682,7 @@ transform:translateY(0);
 
 <div class="info">
 <div class="name">Ahnaf811</div>
-<div class="points">Rookie (18 points)</div>
+<div class="points">Combat Novice (18 points)</div>
 </div>
 
 <div class="region as">AS</div>
@@ -580,7 +706,7 @@ transform:translateY(0);
 
 <div class="info">
 <div class="name">AXENotMenace</div>
-<div class="points">Rookie (10 points)</div>
+<div class="points">Combat Novice (10 points)</div>
 </div>
 
 <div class="region eu">EU</div>
@@ -600,7 +726,7 @@ transform:translateY(0);
 
 <div class="info">
 <div class="name">MezhuKhotuo</div>
-<div class="points">Rookie (10 points)</div>
+<div class="points">Combat Novice (10 points)</div>
 </div>
 
 <div class="region as">AS</div>
