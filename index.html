@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -694,22 +695,6 @@ background-position:center;
 transition:background 0.5s ease;
 }
 
-.bg-cpvp{
-background-image:url("https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6");
-}
-
-.bg-sword{
-background-image:url("https://images.unsplash.com/photo-1612197527275-5c3a2d3f0b4e");
-}
-
-.bg-mace{
-background-image:url("https://images.unsplash.com/photo-1611605698335-8b1569810432");
-}
-
-.bg-nethpot{
-background-image:url("https://images.unsplash.com/photo-1608889175123-8ee362201f81");
-}
-
 .gold{
 animation:championEnter 0.7s ease;
 }
@@ -728,13 +713,36 @@ transform:translateY(0) scale(1);
 }
 }
 
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(10,15,30,0.65);
+z-index:-1;
+}
+
+body{
+background: linear-gradient(270deg,#0b1220,#1f2a44,#2a3f66);
+background-size:600% 600%;
+animation: bgMove 15s ease infinite;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
 </style>
 
 </head>
 
 <body>
 
-<body style="background-image:url('1.jpg');">
+<body style="background:url('https://i.pinimg.com/originals/6e/85/f7/6e85f7e0111ac569249afb790efff78f.gif') center/cover fixed;">
 
 <h1>🏆PvP Tier List🏆</h1>
 <div style="text-align:center;margin:20px;">
